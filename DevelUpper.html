@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevelUpper-Let's DevelUp</title>
+    <link rel="shortcut icon" type="x-icon" href="favicon-16x16.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Anton&family=Baloo+2&family=Changa+One&family=DynaPuff&family=Exo+2:wght@500&family=Josefin+Sans&family=Lobster&family=Prompt:wght@300&family=Secular+One&family=Ubuntu:wght@500&family=Varela+Round&display=swap"
+        rel="stylesheet">
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        body {
+            /* background-color: rgb(45, 63, 111); */
+            color: white;
+            font-family: sans-serif;
+        }
+
+        nav {
+            /* font-size: 20px; */
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 100px;
+            background-color: rgb(84, 48, 232);
+            color: rgb(255, 255, 255);
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        nav ul li {
+            list-style: none;
+            margin: 0 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+        }
+
+        nav ul li a:hover {
+            color: yellow;
+        }
+
+        .left {
+            display: flex;
+        }
+
+        .name {
+            margin: 22px 0 15px 25px;
+            font-size: 35px;
+        }
+
+        .slogan {
+            font-size: 17px;
+            font-family: 'Varela Round', sans-serif;
+        }
+
+        .left img {
+            height: 40%;
+            width: 10%;
+            animation: rotate 2s ease-in-out;
+            animation-iteration-count: 1;
+        }
+
+        .right {
+            font-size: 18px;
+        }
+
+        .firstSection {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin: 45px 0;
+            background-color: rgb(78, 78, 176);
+        }
+
+        .firstSection>div {
+            width: 30%;
+        }
+
+        .leftSection {
+            /* background-color: red; */
+            font-size: 3rem;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .leftSection .btn {
+            padding: 12px;
+            background-color: rgb(78, 78, 176);
+            color: white;
+            border: 2px solid white;
+            border-radius: 10px;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+
+        .leftSection .btn :hover {
+            color: rgb(2, 2, 0);
+        }
+
+
+        .rightSection img {
+            width: 600px;
+            height: 600px;
+            border-radius: 20px;
+        }
+
+        .devupper {
+            color: rgb(209, 59, 136);
+            font-family: 'Ubuntu', sans-serif;
+        }
+
+        #element {
+            color: rgb(56, 143, 224);
+            font-family: 'Secular One', sans-serif;
+        }
+
+        .secondSection {
+            max-width: 100vw;
+            height: 80vh;
+            background-color: rgb(45, 63, 111);
+            /* margin: auto; */
+        }
+
+        hr {
+            border: 0;
+            margin: 0 70px 0 70px;
+            background: rgb(162, 117, 214);
+            height: 2px;
+        }
+
+        .text-gray {
+            color: rgb(112, 142, 219);
+            margin: 100px 0 0 100px;
+            font-size: 30px;
+        }
+
+        h1 {
+            margin: 100px 0 0 100px;
+        }
+
+        .secondSection .box {
+            background-color: white;
+            height: 2px;
+            width: 83vw;
+            display: flex;
+            margin: 56px 100px 56px 100px;
+        }
+
+        .secondSection .vertical {
+            height: 100px;
+            color: white;
+            width: 2px;
+            background-color: white;
+            margin: 0 100px;
+        }
+
+        .image-topdev {
+            width: 53px;
+            position: relative;
+            top: -50px;
+            left: -25px;
+        }
+
+        .image-top {
+            width: 150px;
+            position: relative;
+            top: -60px;
+            left: -75px;
+        }
+
+        .image-topjs {
+            width: 100px;
+            position: relative;
+            top: -63px;
+            left: -50px;
+        }
+
+        .image-toprj {
+            width: 80px;
+            position: relative;
+            top: -78px;
+            left: -41px;
+        }
+
+        .image-topmern {
+            width: 180px;
+            position: relative;
+            top: -60px;
+            left: -90px;
+        }
+
+        .image-topfs {
+            width: 220px;
+            position: relative;
+            top: -83px;
+            left: -90px;
+        }
+
+        .vertical-title1 {
+            font-size: 20px;
+            position: relative;
+            top: 30px;
+            width: 200px;
+        }
+
+        .vertical-desc1 {
+            color: gray;
+            position: relative;
+            top: 40px;
+            width: 100px;
+            font-size: 10px;
+        }
+
+        .vertical-desc1 a {
+            color: white;
+            font-style: none;
+        }
+
+        .vertical-title2 {
+            font-size: 20px;
+            position: relative;
+            top: 30px;
+            width: 200px;
+        }
+
+        .vertical-desc2 {
+            color: gray;
+            position: relative;
+            top: 40px;
+            width: 100px;
+            font-size: 10px;
+        }
+
+        .vertical-desc2 a {
+            color: white;
+            font-style: none;
+        }
+
+        .vertical-title3 {
+            font-size: 20px;
+            position: relative;
+            top: 30px;
+            width: 200px;
+        }
+
+        .vertical-desc3 {
+            color: gray;
+            position: relative;
+            top: 40px;
+            width: 100px;
+            font-size: 10px;
+        }
+
+        .vertical-desc3 a {
+            color: white;
+            font-style: none;
+        }
+
+        .vertical-title4 {
+            font-size: 20px;
+            position: relative;
+            top: 30px;
+            width: 200px;
+        }
+
+        .vertical-desc4 {
+            color: gray;
+            position: relative;
+            top: 40px;
+            width: 100px;
+            font-size: 10px;
+        }
+
+        .vertical-desc4 a {
+            color: white;
+            font-style: none;
+        }
+
+        .vertical-title5 {
+            font-size: 20px;
+            position: relative;
+            top: 30px;
+            width: 200px;
+        }
+
+        .vertical-desc5 {
+            color: gray;
+            position: relative;
+            top: 40px;
+            width: 100px;
+            font-size: 10px;
+        }
+
+        .vertical-desc5 a {
+            color: white;
+            font-style: none;
+        }
+
+        .vertical-title11 {
+            font-size: 20px;
+            position: relative;
+            top: 30px;
+            width: 200px;
+        }
+
+        .vertical-desc11 {
+            color: rgb(141, 140, 140);
+            position: relative;
+            top: 40px;
+            width: 100px;
+            font-size: 10px;
+        }
+
+        .footer {
+            font-family: 'Fira Sans', sans-serif;
+            display: flex;
+            padding: 60px 120px;
+            background-color: rgb(84, 81, 81);
+            justify-content: space-evenly;
+            height: 130px;
+        }
+
+        .footer>div {
+            width: 270px;
+        }
+
+        .footer ul {
+            list-style: none;
+        }
+
+        .footer ul li {
+            margin: 11px;
+            font-family: 'Exo 2', sans-serif;
+        }
+
+        .footer ul li a {
+            text-decoration: none;
+            color: white;
+        }
+
+        .footer ul li :hover {
+            color: black;
+        }
+
+        footer .footer-rights {
+            text-align: center;
+            background-color: rgb(116, 112, 112);
+            padding: 30px;
+            font-family: 'Josefin Sans', sans-serif;
+        }
+
+        footer .footer-slogan {
+            background-color: rgb(65, 21, 178);
+            color: white;
+            height: 50px;
+            text-align: center;
+            padding: 50px;
+            font-size: 40px;
+            font-family: 'Ubuntu', sans-serif;
+        }
+
+        .footer-1 img {
+            height: 45px;
+            width: 40px;
+        }
+
+        .footer-slogan img {
+            height: 60px;
+            width: 60px;
+
+        }
+
+        .btn a {
+            text-decoration: none;
+            color: white;
+        }
+
+        .buttons button {
+            border-radius: 15px;
+        }
+
+        .right ul li a {
+            font-family: 'Alfa Slab One', cursive;
+        }
+
+        @keyframes rotate {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="left"><img src="Untitled_-_5_June_2023_20.12-removebg-preview.png">
+                <div class="name">DevelUpper <div class="slogan">Let's DevelUp</div>
+                </div>
+            </div>
+            <div class="right">
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/">About</a></li>
+                    <li><a href="/">Services</a></li>
+                    <li><a href="SCOREKEEPER/" target="_blank">Projects</a></li>
+                    <li><a href="/">Follow Us</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="firstSection">
+            <div class="leftSection">Hi! Welcome to <span class="devupper">DevelUpper</span>
+                <div>a web development info platform.</div>
+                <span id="element"></span>
+                <div class="buttons">
+                    <button class="btn"><a href="https://roadmap.sh/full-stack" target="_blank">Roadmap for
+                            Web-Development</a></button>
+                    <button class="btn"><a
+                            href="https://www.cdw.com/content/cdw/en/articles/software/top-10-free-web-development-resources.html"
+                            target="_blank">Download Free Material</a></button>
+                </div>
+            </div>
+            <div class="rightSection"><img src="devimg-removebg-preview.png"></div>
+        </section>
+        <hr>
+        <section class="secondSection"><span class="text-gray">About Us</span>
+            <h1>Our Services</h1>
+
+            <div class="box">
+                <div class="vertical">
+                    <img class="image-topdev" src="webdevimg-removebg-preview.png" alt="">
+                    <div class="vertical-title11">Learn Web-Development</div>
+                    <div class="vertical-desc11">Learn from top developers around the country and master your skills.
+                    </div>
+
+                </div>
+                <div class="vertical">
+                    <img class="image-top" src="image_top-removebg-preview.png" alt="">
+                    <div class="vertical-title1">Get you hands on HTML and CSS</div>
+                    <div class="vertical-desc1">Start by learning the basics first from <a
+                            href="https://www.youtube.com/playlist?list=PL4cUxeGkcC9ivBf_eKCPIAYXWzLlPAm6G"
+                            target="_blank">here</a>
+                    </div>
+                </div>
+                <div class="vertical">
+                    <img class="image-topjs" src="js-removebg-preview.png" alt="">
+                    <div class="vertical-title2">Learn JavaScript</div>
+                    <div class="vertical-desc2">Complete your learning by taking our skill tests from <a
+                            href="https://www.youtube.com/watch?v=jS4aFq5-91M&t=383s" target="_blank">here</a>
+                    </div>
+                </div>
+                <div class="vertical">
+                    <img class="image-toprj" src="react-removebg-preview.png" alt="">
+                    <div class="vertical-title3">Know about ReactJS</div>
+                    <div class="vertical-desc3">Full guide to learn and applly ReactJs in your website click <a
+                            href="https://www.youtube.com/watch?v=bMknfKXIFA8&t=622s" target="_blank">here</a>
+                    </div>
+                </div>
+                <div class="vertical">
+                    <img class="image-topmern" src="mern-removebg-preview.png" alt="">
+                    <div class="vertical-title4">Become a MERN Stack Developer</div>
+                    <div class="vertical-desc4">Learn MongoDB,Express,ReactJS and NodeJS.It's all <a
+                            href="https://www.youtube.com/watch?v=bMknfKXIFA8&t=622s" target="_blank">here</a>
+                    </div>
+                </div>
+                <div class="vertical">
+                    <img class="image-topfs" src="fullstack-removebg-preview.png" alt="">
+                    <div class="vertical-title5">Become a full-stack developer</div>
+                    <div class="vertical-desc5">Get to know about both front-end development as well as back-end
+                        development from <a href="https://www.youtube.com/watch?v=nu_pCVPKzTk&t=16127s"
+                            target="_blank">here</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer">
+            <div class="footer-1"><img src="Untitled_-_5_June_2023_20.12-removebg-preview.png">
+                <h3>DevelUpper</h3>
+            </div>
+            <div class="footer-2">
+                <ul>
+                    <li><a href="https://www.google.com/search?q=instagram&rlz=1C1ONGR_enIN1036IN1036&oq=ins&aqs=chrome.0.69i59j69i57j0i20i131i263i433i512j0i131i433i512j69i60l2j69i61j69i60.3162j0j7&sourceid=chrome&ie=UTF-8"
+                            target="_blank">Instagram</a></li>
+                    <li><a href="https://www.linkedin.com/in/arghadeep-bosu-249068226/" target="_blank">LinkedIn</a>
+                    </li>
+                    <li><a href="https://twitter.com/i/flow/login" target="_blank">Twitter</a></li>
+                    <li><a href="https://www.facebook.com/" target="_blank">Facebook</a></li>
+                </ul>
+            </div>
+            <div class="footer-3">
+                <ul>
+                    <li><a href="https://www.youtube.com/playlist?list=PLu0W_9lII9agiCUZYRsvtGTXdxkzPyItg"
+                            target="_blank">Useful YouTube link</a></li>
+                    <li><a href="https://www.udemy.com/course/front-end-web-development-complete-guide-step-by-step/"
+                            target="_blank">Front-end Course</a></li>
+                    <li><a href="https://www.udemy.com/course/php-mysql-tutorial-beginner-move-first-steps-learn-codes-to-start/?kw=back-end+web&src=sac"
+                            target="_blank">Back-end Course</a></li>
+                    <li><a href="https://www.udemy.com/course/the-web-developer-bootcamp/" target="_blank">Full-stack
+                            course</a></li>
+                </ul>
+            </div>
+            <div class="footer-4">
+                <ul>
+                    <li><a href="http://127.0.0.1:5500/index.html" target="_blank">Go To Top</a></li>
+                    <li><a href="https://www.northwestregisteredagent.com/wp-content/uploads/2021/02/A-Certificate-of-Incorporation.pdf"
+                            target="_blank">Our Certificate of Incorporation</a></li>
+                    <li><a href="https://www.freeprivacypolicy.com/live/c36fd7dd-ad40-44bb-9342-a904f31a192d"
+                            target="_blank">Our Privacy Policy</a></li>
+                    <li><a href="editors.html" target="_blank">View Editor(s)</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-rights">2023 Copyright&#169; | All Rights Reserved</div>
+        <div class="footer-slogan"><img src="Untitled_-_5_June_2023_20.12-removebg-preview.png">DevelUpper&#169;</div>
+    </footer>
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <script>
+        var typed = new Typed('#element', {
+            strings: ['Welcome!', 'start your journey', '&amp; become a Full-Stack dveloper.'],
+            typeSpeed: 50,
+        });
+    </script>
+</body>
+
+</html>
